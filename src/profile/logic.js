@@ -6,7 +6,7 @@ import 'rxjs/add/operator/catch'
 import 'rxjs/add/observable/of'
 import { apiCall } from '../common/utils'
 import { ERROR } from '../common/container/Status/logic'
-import { repo } from '../common/utils/data'
+// import { repo } from '../common/utils/data'
 
 const PROFILE = 'PROFILE'
 export const PROFILE_SUCCESS = 'PROFILE_SUCCESS'

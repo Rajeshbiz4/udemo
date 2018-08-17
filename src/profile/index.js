@@ -2,28 +2,20 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { profileAction } from './logic'
-import TabsComponent from '../Tabs'
 import { Loader } from '../common/components'
 
 class Profile extends Component {
-    constructor(props) {
-    super(props);
-  }
 
   componentDidMount () {
     this.props.profileAction(this.props.data);
   }
 
-  componentWillReceiveProps(nextProps) {
-    console.log('Profile----', nextProps)
-  }
- 
- 
+
   render () {
     return (
       <Loader loading={this.props.profile.loading} error={this.props.profile.error}>
       <div>
-         <img src={this.props.profile.data.avatar_url} /> 
+         <img alt='' src={this.props.profile.data.avatar_url} /> 
          Name :{this.props.profile.data.name} <br />
          bio:{this.props.profile.data.bio} <br />
          company: {this.props.profile.data.company} <br />

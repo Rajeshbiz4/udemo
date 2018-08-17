@@ -2,14 +2,10 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { repoAction } from './logic'
-import TabsComponent from '../Tabs'
 import { Loader } from '../common/components'
 
 class Repositories extends Component {
-    constructor(props) {
-    super(props);
-  }
-
+  
   componentDidMount () {
     this.props.repoAction(this.props.data);
   }
@@ -21,7 +17,7 @@ class Repositories extends Component {
       <div>
       {this.props.repo.data.map((station,index) => 
          <div className="well" key={index}>
-         <img src={station.owner.avatar_url} />
+         <img alt='' src={station.owner.avatar_url} />
           <div>Name:{station.name}, Full name: {station.full_name}<br />description : {station.description}</div>
          </div> )} 
         </div>
